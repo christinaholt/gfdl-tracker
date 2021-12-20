@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -eux
 source ./machine-setup.sh > /dev/null 2>&1
@@ -18,6 +18,10 @@ elif [ $target = orion ]; then
   export F90=ifort
   export CC=icc
 elif [ $target = jet ]; then
+  export FC=ifort
+  export F90=ifort
+  export CC=icc
+elif [ $target = aws ]; then
   export FC=ifort
   export F90=ifort
   export CC=icc
